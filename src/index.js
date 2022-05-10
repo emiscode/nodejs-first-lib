@@ -40,11 +40,22 @@ const getFilePromise = function(filePath) {
     })
 }
 
+const getFileWithAsyncAwait = async function(filePath) {
+    try {
+        const encoding = 'utf-8';
+        const file = await fs.promises.readFile(filePath, encoding);
+        console.log(chalk.green(file));
+    } catch(err) {
+        handleError(err);
+    }
+}
+
 const pathToFile = './files/file-01.md';
 const pathToFileWrong = pathToFile + 'wrong';
 
 //getFileSync(pathToFile);
 //getFileAsync(pathToFile);
-getFilePromise(pathToFile);
+//getFilePromise(pathToFile);
+getFileWithAsyncAwait(pathToFile);
 
 console.log(chalk.red('end'));
