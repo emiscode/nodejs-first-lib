@@ -1,3 +1,5 @@
+import chalk from 'chalk';
+
 const extractLinks = (text) => {
     const regex = /\[([^\]]*)\]\((https?:\/\/[^$#\s].[^\s]*)\)/gm;
 
