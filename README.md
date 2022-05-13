@@ -1,4 +1,5 @@
 # nodejs-first-lib
 
-- read files with fs: sync, async/await promises
-- extract links from a text file with regex
+- read files with fs api using sync and async approaches
+- extract links from a text file with regex expression
+- validate each link with fetch api and promises
